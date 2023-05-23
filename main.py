@@ -13,25 +13,26 @@ chosen_word = word_list_main[randint(0, len(word_list_main) - 1)]
 mistery_list = ["_" for letter in chosen_word]
 mistery_list_len1 = len(mistery_list)
 
-# print(F"""
-# --- TESTING 1 ---
-#  {chosen_word = }
-# --- TESTING 1 --------------------------------------------------------------------------------------------------------
-# """)
+print(F"""
+--- TESTING 1 ---
+ {chosen_word = }
+--- TESTING 1 --------------------------------------------------------------------------------------------------------
+""")
 
 print(logo)
-print(mistery_list)
+# print(mistery_list)
 
 while still_playing:
+    print(mistery_list)
     letter_guess = input("Let's guess a letter\n").lower()
 
     for index in range(len(chosen_word)):
         if letter_guess == chosen_word[index]:
             mistery_list[index] = letter_guess
-            print(f"Not bad! {letter_guess} is in the word")
+
 
     if letter_guess in used_letters_list:
-        print(f"{letter_guess} is already there!")
+        print(f"{letter_guess} is already used! Try another letter...")
 
     # print(mistery_list)
 
@@ -45,10 +46,14 @@ while still_playing:
             print(fuck_you)
 
     elif "_" not in mistery_list:
+        still_playing = False
         print(medal)
 
+    else:
+        print(f"Not bad! {letter_guess} is in the word")
+
     used_letters_list.append(letter_guess)
-    print(mistery_list)
+
 
 #     print(f"""
 # --- Testing 2 ----
