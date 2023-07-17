@@ -19,6 +19,7 @@ mistery_list_len1 = len(mistery_list)
 # --- Testing 1 --------------------------------------------------------------------------------------------------------
 # """)
 
+# TODO-2 - Game Flow.
 print(logo)
 print(mistery_list)
 
