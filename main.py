@@ -1,5 +1,5 @@
 from random import randint
-from stages import stages_, medal, logo, fuck_you
+from stages import stages_, medal, logo
 from hangman_words import word_list
 
 still_playing = True
